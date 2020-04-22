@@ -1,0 +1,249 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    min-width: 650px;
+    min-height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.left footer {
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+header {
+    height: 154px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    border: 3px solid gray;
+    height: 128px;
+}
+
+.left {
+    position: absolute;
+    float: left;
+    background-color: gray;
+    top: 0;
+    bottom: 0;
+    width: 282px;
+
+    color: beige;
+}
+
+.navigation-point {
+    padding: 4px;
+}
+
+.left ul {
+    list-style: none;
+    padding: 4px;
+    margin: 0px;
+}
+
+.left li {
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.small-link {
+    color: #503018;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.small-link:hover {
+    color: white;
+}
+
+.big-link {
+    text-shadow: 2px 2px 2px black;
+    text-decoration: none;
+    color: white;
+}
+
+.big-link:hover {
+    color: #503018;
+}
+
+.top-link {
+    font-family: serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: none;
+    color: white;
+}
+
+.top-link:hover {
+    color: #d8b37b;
+}
+
+.left nav {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    overflow: auto;
+    height: calc(100vh - 240px);
+}
+
+.left hr {
+    border: none;
+    border-top: 3px solid gray;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    background-image: url("art/woodtexture-lowcontrast.jpg");
+    background-repeat: repeat;
+    background-color: #d8b37b;
+}
+
+.right {
+    margin-left: 282px;
+    min-width: 315px;
+    max-width: calc(100% - 285px);
+    min-height: 100vh;
+    background-color: white;
+    border-left: 3px solid gray;
+}
+
+.right header {
+    background-image: url("art/background1Blurred.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: beige;
+    border-bottom: 3px solid lightgray;
+    text-align: center;
+}
+
+.right footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #E0E0E0;
+}
+
+.right footer a {
+    color: #503018;
+}
+
+.right footer a:hover {
+    color: black;
+}
+
+.right footer span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.right footer .email {
+    font-style: italic;
+}
+
+.right h1 {
+    margin: auto;
+    font-size: 64px;
+    color: White;
+    text-shadow: 2px 2px 2px black;
+}
+
+.right h3 {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.right dl {
+    float: left;
+    font-size: 18px;
+}
+
+.right dt {
+    padding-top: 5px;
+    width: 150px;
+    float: left;
+    text-align: right;
+}
+
+.right dt::after {
+    content: ": ";
+}
+
+.right dd {
+    padding-top: 5px;
+    margin-left: 160px;
+}
+
+.content {
+    padding: 5px;
+    min-height: calc(100vh - 225px);
+}
+
+.content-box {
+    border: 3px solid lightgray;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.new {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    overflow: auto;
+}
+
+.new img {
+    float: left;
+    margin-right: 10px;
+}
+
+.new strong {
+    float: right;
+    margin-right: 5px;
+    margin-top: 2px;
+    font-size: 20px;
+}
+
+.right-image {
+    float: right;
+    margin: 10px;
+}
+
+.box-link {
+    text-decoration: none;
+    color: #301010;
+}
+
+#left-content {
+    width: 262px;
+    padding: 10px;
+}
+
+.mapouter {
+    float: right;
+}
+
+#daily-menu-content {
+    visibility: hidden;
+}
+
+#daily-menu-hidden {
+    position: absolute;
+}

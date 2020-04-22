@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shattered Glass Restaurant</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="art/icon.png">
+</head>
+<body onload="changeOnLoad();">
+    <script type="text/javascript">
+        function changeDisplay() {
+            var element = document.getElementById('daily-menu-content');
+            var hidden = document.getElementById('daily-menu-hidden');
+
+            if (element.style.visibility != "visible") {
+                element.style.visibility = "visible";
+                hidden.style.visibility = "hidden";
+                document.cookie = "VISIBLE=1";
+            }
+            else {
+                element.style.visibility = "hidden";
+                hidden.style.visibility = "visible";
+                document.cookie = "VISIBLE=0";
+            }
+        }
+
+        function changeOnLoad() {
+            var i = document.cookie.indexOf("VISIBLE");
+            var visible = document.cookie.substring(i+8, i+9);
+
+            if (visible == "1") {
+                changeDisplay();
+            }
+        }
+    </script>
+    <div class="left">
+        <div class="sticky">
+            <header>
+                <div class="logo">
+                    <a href="http://www.stud.fit.vutbr.cz/~xnovot1f/ShatteredGlass/index.html"><img src="art/shattered_glass_logo.png" alt="Shattered Glass Logo"></a>
+                </div>
+            </header>
+            <div id="left-content">
+                <nav class=main-menu>
+                    <ul>
+                        <li class="navigation-point">
+                            <a class="big-link" href="index.html">Currently</a>
+                            <ul>
+                                <li><a class="small-link" href="index.html#daily-menu">Daily Menu</a></li>
+                                <li><a class="small-link" href="index.html#news">News</a></li>
+                                <li><a class="big-link" href="reservations.html">Reservations</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation-point">
+                            <a class="big-link" href="meals.html">Full Menu</a>
+                            <ul>
+                                <li class="navigation-point">
+                                    <a class="big-link" href="food.html">Food</a>
+                                    <ul>
+                                        <li><a class="small-link" href="food.html#food-appetizers">Appetizers</a></li>
+                                        <li><a class="small-link" href="food.html#food-main-courses">Main Courses</a></li>
+                                        <li><a class="small-link" href="food.html#food-desserts">Desserts</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navigation-point">
+                                    <a class="big-link" href="drinks.html">Drinks</a>
+                                    <ul>
+                                        <li><a class="small-link" href="drinks.html#drinks-alcoholic">Alcoholic</a></li>
+                                        <li><a class="small-link" href="drinks.html#drinks-non-alcoholic">Non-alcoholic</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation-point">
+                            <a class="big-link" href="about.html">About Us</a>
+                            <ul>
+                                <li><a class="small-link" href="about.html#contacts">Contacts</a></li>
+                                <li><a class="small-link" href="about.html#history">Our History</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <footer>
+                <hr>
+                <a class="top-link" href="#"><img src="art/Top3.png" alt="Up"> Go Back To The Top</a>
+            </footer>
+        </div>
+    </div>
+    <div class="right">
+        <header>
+            <h1>What's Up</h1>
+        </header>
+        <div class="content">
+            <div class="content-box" id="daily-menu">
+                <h2>Daily Menu</h2>
+                <div id="daily-menu-hidden" onclick="changeDisplay();">
+                    <h3>Click here to load daily menu...</h3>
+                </div>
+                <div id="daily-menu-content" onclick="changeDisplay();">
+                    <h3>Today we have:</h3>
+                    <div class="new">
+                        <img src="art/appetizer.jpg" alt="Apetizer Image">
+                        <strong>€ 99.99</strong>
+                        <h3>A Different Salad</h3>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div class="new">
+                        <img src="art/maincourse.jpg" alt="Main Course Image">
+                        <strong>€ 99.99</strong>
+                        <h3>Some Delicious Food</h3>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Seznam alergenů: 1, 3, 6.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-box" id="news">
+                <h2>News</h2>
+                <div class="new">
+                    <h3>This is news</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Praesent dapibus. Vivamus porttitor turpis ac leo. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Nullam eget nisl. In enim a arcu imperdiet malesuada. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna.</p>
+                </div>
+                <div class="new">
+                    <h3>Something Happened</h3>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam neque. In convallis. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Praesent dapibus. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Curabitur vitae diam non enim vestibulum interdum. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam id dolor. Duis pulvinar. Maecenas aliquet accumsan leo. Nullam rhoncus aliquam metus. Nunc tincidunt ante vitae massa. Integer in sapien. Mauris tincidunt sem sed arcu. Integer in sapien.</p>
+                </div>
+                <div class="new">
+                    <h3>Easter Holidays</h3>
+                    During the easter holidays we are closed from Friday to Monday. See you again on Tuesday.
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>
+                <a href="index.html">Shattered Glass</a> &gt;
+                <a href="index.html">Currently</a>
+            </span>
+
+            <span>Copyright 2019 &copy; - Acaran</span>
+
+            <span class="email">franta.lopata.69@gmail.com</span>
+        </footer>
+    </div>
+</body>
+</html>
